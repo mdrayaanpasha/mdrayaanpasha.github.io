@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  body{
+    background-color: black;
+    color:white;
+    font-family: 'Poppins';
+  }
+  nav ul li a{
+    text-decoration: none;
+    color:white;
+  }
+  nav ul{
+    display: flex;
+    align-items: center;
+    gap:3vw;
+    margin-right:5vw;
+  }
+  nav ul li{
+    list-style: none;
+  }
+  main{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding:2vw;
+    height: 98vh;
+  }
+  main img{
+    height: 80vh;
+    border-radius: 1vw;
+  }
+  .heading-main{
+    font-size:10vh;
+    font-weight:bolder;
+    margin-bottom:0;
+  }
+  main p{
+    font-size: large;
+    max-width: 50vw;
+  }
+  main button{
+    background: white;
+    color:black;
+    border:1px solid white;
+    height: 6vh;
+    width:10vw;
+    font-size: 2.5vh;
+    margin-right: 2vw;
+    border-radius:0.5vw;
+    font-weight: bolder;
+  }
+  
+  .section-r{
+    background: rgb(244, 242, 242);
+    width:92vw;
+    padding:3vw;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2vw;
+    color: black;
+  }
+  .section-r img{
+    height: 90%;
+    border-radius: 1vw;
+  }
+  .section-r h1{
+    font-weight: bolder;
+    font-size: 7vh;
+    margin-bottom:0;
+  }
+  .section-r div{
+    max-width: 90%;
+    padding:2vw;
+  }
+  .section-r button{
+    margin-top:1vw;
+    background: black;
+    color:white;
+    border:none;
+    font-weight: bold;
+    font-size: larger;
+    padding:1vw;
+    border-radius:0.5vw;
+  }
+
+
+  @media(max-width:13000px){
+    main img{
+      height: 65vh;
+    }
+    .heading-main{
+      font-size: 7vh;
+    }
+
+    .section-r h1{
+      font-size:5vh;
+    }
+  }
+
+  @media(max-width:1100px){
+    main img{
+      height: 55vh;
+    }
+  }
+
+@media(max-width:1000px){
+  main{
+    flex-wrap: wrap-reverse;
+    margin:0;
+    width: 100vw !important;
+    justify-content: start;
+  }
+  main img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  main center{
+    margin:0vw !important;
+  }
+ 
+}
+
+@media(max-width:700px){
+  main{
+    padding:0;
+  }
+  main p{
+    max-width: 80vw
+  }
+  .heading-main{
+    font-size: 5vh;
+  }
+ 
+  main button{
+    width: 30vw;
+  }
+}
+
+@media(max-width:500px){
+  main img{
+    height: 40vh;
+  }
+  nav ul{
+    display: none;
+  }
+  nav{
+    font-size: 3vh;
+    align-items: center;
+  }
+}
+
+@media(max-width:700px){
+  main img{
+    margin-left: 0vw;
+    border-radius: 2vw;
+    width: 50vw;
+    height:auto;
+    margin-left: 20vw;
+  }
+
+  main{
+    height: 100vh;
+    padding-left:12vw;
+  }
+  .section-r{
+    flex-wrap: wrap-reverse;
+    height: auto;
+    width: 100vw;
+  }
+  .normal-wrap{
+    flex-wrap: wrap !important;
+    height: auto;
+    width: 100vw;
+  }
+  .section-r img{
+    height: 40vh;
+    width: auto;
+  }
+  .section-r h1{
+    font-size: 3vh;
+    max-width: 80vw;
+  }
+  .section-r p{
+    font-size: 2vh;
+    max-width: 80vw;
+  }
+  .heading-main{
+    font-size: 4vh;
+  }
+  
+}
+
+@media(max-width:600px){
+  main img{
+    width: 70vw;
+    margin:0;
+
+  }
+  main{
+    padding-left:20vw;
+  }
+
+  .section-r button{
+    width: 80vw;
+    height:6vh;
+    border-radius: 1vw;
+  }
+
+}
+
+
+@media(max-width:450px){
+  main img{
+    width: auto;
+    height: 45vh;
+    
+  }
+  main{
+    padding-left:3vw;
+  }
+  .heading-main{
+    font-size:4.2vh;
+  }
+  main div{
+    padding-left:5vw;
+  }
+
+  main button{
+    height:5vh;
+    width:40vw;
+  }
+}
+
+/* main.css */
+/* Example transition on buttons */
+button {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background-color: grey;
+  color: white;
+}
+
+/* Example transition on images */
+img {
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+/* main.css */
+/* Example keyframe animation for headings */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-r h1 {
+  animation: fadeInUp 0.6s ease both;
+}
+
+/* Example keyframe animation for buttons */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.section-r button {
+  animation: slideInRight 0.6s ease both;
+}
+
+/* Example keyframe animation for images */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.section-r img {
+  animation: fadeIn 1s ease both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-r h1 {
+  animation: fadeInUp 0.6s ease both;
+}
+
+
+
+.section-r button {
+  animation: slideInRight 0.6s ease both;
+}
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.section-r img {
+  animation: fadeIn 1s ease both;
+}
+button:hover{
+  cursor:pointer;
+background-color: grey !important;
+}

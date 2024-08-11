@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        body{
+            font-family: 'Poppins',serif;
+            color:rgba(0, 0, 0, 0.874);
+            background-color:antiquewhite;
+        }
+        main img{
+            /* width: auto; */
+            height:60vh;
+            width: 98vw;
+
+            background-size: cover;
+            object-fit: cover;
+            border-radius: 2vw;
+        }
+    
+        #img2{
+            width: 28vw;
+        }
+
+        main h1{
+            margin:0;
+            font-size: 10vh;
+            font-weight: bolder;
+        }
+        nav, nav ul{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        nav ul{
+            gap:2vw;
+            margin-right: 2vw;
+        }
+
+        nav h2{
+            padding:1vw;
+        }
+        nav a{
+            color:white;
+            text-decoration: none;
+        }
+        
+        nav li{
+            list-style-type:none;
+            background-color: black;
+            color: white;
+            padding:0.5vw 1vw;
+            border-radius: 2vw;
+        }
+        nav button{
+        display: none!important;
+    }
+    main p{
+        margin:0;
+    }
+
+        @media(max-width:600px){
+        
+        nav ul{
+            display: none;
+        }
+       
+    }
+    .work h1{
+        font-weight: bolder;
+        padding:2vw;        
+    }
+    .card {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-bottom: 6vh;
+    }
+    .card img{
+        width: 30vw;
+        border-radius: 2vw ;
+        
+    }
+    .card .des{
+        padding:1vw;
+        max-width: 60vw;
+    }
+
+    .des button{
+        border:none;
+        background-color: black;
+        color:white;
+        width: 13vw;
+        height: 6vh;
+        font-weight: bold;
+        font-size: 2vh;
+        border-radius: 1vw;
+    }
+
+    .work h1{
+        font-size: 4vh;
+        font-weight: bolder;
+    }
+
+    @media(max-width:980px){
+        main h1{
+            font-size: 4vh;
+        }
+        main img{
+            height:60vh;
+            width: 96vw;
+            border-radius: 4vw;
+        }
+        .des{
+            font-size: 1vh;
+        }
+        .des button{
+            font-size:1.5vh;
+            width: 25vw;
+        }
+        .des h2{
+            font-size: 1.5vh;
+        }
+    }
+
+    @media(max-width:600px){
+        .card{
+            flex-wrap: wrap;
+        }
+        .rev{
+            flex-wrap: wrap-reverse;
+        }
+        .card img{
+            width: 55vw;
+        }
+        
+        .des h2{
+            font-size:2vh;
+        }
+    }
+
+    @media(max-width:450px){
+        main img{
+            border-radius: 6vw;
+        }
+        .card img{
+            width: 80vw;
+        }
+        .card .des{
+            max-width: 80vw;
+        }
+        .des{
+            font-size: 1.2vh;
+        }
+        .des button{
+            width: 50vw;
+        }
+    }
+
+   
+    </style>
+</head>
+<body>
+    <nav>
+        <h2>Rayaan Pasha</h2>
+        <ul>
+            <li><a href="./education.html">Education</a></li>
+            <li><a href="./teaching.html">Teaching</a></li>
+            <li><a href="./projects.html">Project</a></li>
+            
+        </ul>
+        <button id="openDialog" style="display: hidden;"><i class="fa fa-bars" aria-hidden="true"></i></button>
+    </nav>
+    <main>
+        <center>
+            <div class="img">
+    <img id="img1" src="./Firefly A minimalist, stylized image of a tree structure with nodes elegantly connected by smooth li (1).jpg" alt="">
+    <!-- <img id="img2" src="./Firefly A minimalist, stylized image of a tree structure with nodes elegantly connected by smooth li (2).jpg" alt=""> -->
+</div>
+    <h1>RE-IMAGINING DATA STRUCTURES.</h1>
+    <p>Discover My insights and findings in the field of data structures.</p>
+</center>
+</main>
+<section class="work">
+    <h1>RECENT WORK</h1>
+    <div class="f-b">
+        <div class="card">
+            <img src="./1r.jpeg" alt="">
+        
+            <div class="des">
+                <h2>Dynamic Range Partitioning With Pointer Machines & Binary Search Trees.</h2>
+                <p>This research presents DRP-PMBST, a data structure that combines pointer machines and binary search trees to efficiently manage and search large numeric ranges. By dynamically partitioning data and using separate BSTs for each sub-range, DRP-PMBST enhances search and insertion performance with an average time complexity of O(log(query_num) + log k). This structure offers improved scalability and efficiency for dynamic data management.</p>
+                <button onclick="DRP_PMBST()">Access Paper &rarr; </button>
+            </div>
+        </div>
+        
+        <div class="card rev">
+            
+        
+            <div class="des ">
+                <h2>Fully Retroactive Confluent Data Structure</h2>
+                <p>The Fully Retroactive Confluent Data Structure is an innovative solution for managing historical data. It enables retroactive modifications of past data without affecting future states and supports confluent merging of divergent versions into a coherent new version. This approach combines efficiency in handling updates, insertions, and deletions with robust version control, making it ideal for collaborative editing, version control, and historical data analysis.</p>
+                <button onclick="retro()">Access Paper &rarr; </button>
+
+            </div>
+            <img src="./r2.jpeg" alt="">
+        </div>
+    </div>
+</section>
+    <script>
+        function DRP_PMBST(){
+            window.location.href="https://docs.google.com/document/d/1y8wbJoweqh-ilR6HI-2SnZpu4PZF0hhE4zQMybKSe0k/edit?usp=sharing";
+        }
+        function retro(){
+            window.location.href="https://www.linkedin.com/pulse/innovating-data-structures-introducing-fully-confluent-rayaan-pasha-kezqf/"
+        }
+    </script>
+</body>
+</html>
