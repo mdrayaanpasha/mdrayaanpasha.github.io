@@ -173,14 +173,14 @@
 </head>
 <body>
     <nav>
-        <h2>Rayaan Pasha</h2>
+        <h2 onclick="Home()" style="cursor:pointer">Rayaan Pasha</h2>
         <ul>
             
-            <li><a href="./teaching.html">Research</a></li>
-            <li><a href="./teaching.html">Innovation</a></li>
+            <li><a href="./research.html">Research</a></li>
+            <li><a href="./projects.html">Innovation</a></li>
             <li><a href="./teaching.html">Teaching</a></li>
-            <li style="background-color: grey;"><a href="./projects.html">Education</a></li>
-            <li><a href="./education.html">Blogs</a></li>
+            <li style="background-color: grey;"><a href="./education.html">Education</a></li>
+            <li><a href="./blogs.html">Blogs</a></li>
             
         </ul>
         <button id="openDialog" style="display: hidden;"><i class="fa fa-bars" aria-hidden="true"></i></button>
@@ -236,5 +236,9 @@
 
     </div>
 </section>
+    <script>
+        function Home(){
+            window.location.href="./"
+    </script>
 </body>
 </html>
