@@ -22,6 +22,10 @@
             font-weight: bold;
             color:black !important;
         }
+        .u-btn{
+            background-color: white !important;
+
+        }
     </style>
     <nav>
       <h2 style="margin-left: 1vw;"><a href="./" style="color: white; text-decoration: none;">Rayaan Pasha</a></h2>
@@ -46,32 +50,43 @@
         
       </main>
 
-      <section class="section-r normal-wrap" id="mern">
+    <section class="section-r" id="route-optimization">
+        <div>
+        <h1>Ship Route Optimization Algorithm</h1>
+        <p>Optimize routes between 5 major Indian ports with an augmented Dijkstra algorithm, considering distance and risk factors for efficient navigation.</p>
+        <button onclick="routeOptimization()">View Source Code &rarr;</button>
+        </div>
+        <img src="https://mdrayaanpasha.github.io/upload_img_34082985_09_15_2024_05_14_34_058071_4941929073718409095.jpg" alt="">
+
+    </section>
+     
+
+      <section class="section-r normal-wrap" id="mern" style="background-color: #8FB2C3;color:white">
         <img src="https://mdrayaanpasha.github.io/skillflix.jpeg" alt="">
         <div>
           <h1>Social Networking - MERN | '24</h1>
           <p>Skillflix is a Social Networking site, made with MERN, featuring authentication, messaging, notifications Systems & More.</p>    
-          <button onclick="skillflix()">View Source Code &rarr;</button>   
+          <button onclick="skillflix()" style="color: #85B9C7;" class="u-btn">View Source Code &rarr;</button>   
         </div>
         
       </section>
-      <section class="section-r" id="dsa" style="background-color: #122631;color: white;">
+      <section class="section-r" id="dsa">
         
         <div>
           <h1>Fully Confluent Retro-Active Data Structure | '24</h1>
           <p>A novel data structure that combines retroactivity with confluence, enabling dynamic management of historical data and merging divergent histories. </p>
-          <button style="background-color: #fff;color: black;" onclick="ds()">View Source Code &rarr;</button>
+          <button  onclick="ds()">View Source Code &rarr;</button>
         </div>
         <img src="https://mdrayaanpasha.github.io/dp.jpeg" alt="">
       </section>
 
-      <section class="section-r normal-wrap" id="projects">
+      <section class="section-r normal-wrap" id="projects" style="background-color: #451A13;color:white">
         <img src="https://mdrayaanpasha.github.io/serv.jpeg" alt="">
 
         <div>
           <h1>Service Market Place - MERN | '24</h1>
           <p>Created a platform where people can find doctors & Teachers, had authentication system & intuitive appointment algorithm.</p>
-          <button onclick="DT()">View Source Code &rarr;</button>
+          <button onclick="DT()" class="u-btn" style="color: #451A13;">View Source Code &rarr;</button>
         </div>
       </section>
 
@@ -79,23 +94,23 @@
       
 
 
-      <section class="section-r " id="php" style="background-color: #181A1A;color: white;">
+      <section class="section-r " id="php">
         <div>
           <h1>E-Commerce Website - PHP SQL | '24</h1>
           <p>Drawing inspiration from popular sit-com "Modern Family" created an e-com store for fictional Prittchets Closet.</p>
-          <button style="background-color: #fff;color: black;" onclick="pritts()">View Source Code &rarr;</button>
+          <button  onclick="pritts()">View Source Code &rarr;</button>
         </div>
         <img  src="https://mdrayaanpasha.github.io/genai_m4_ldc_ncg_v3_upload_img_62283695_09_15_2024_04_21_39_379262_2811495422512284025.jpg" alt="">
 
       </section>
 
-      <section class="section-r normal-wrap" >
+      <section class="section-r normal-wrap" style="background-color: #C77C47;color:white">
         <img src="https://mdrayaanpasha.github.io/collply.jpeg" alt="">
 
         <div>
           <h1>College Application  - PHP SQL | '24</h1>
           <p>Created a platform where prospect college students could apply to multiple colleges on one platform, featuring dynamic forms, authemticaton & search systems</p>
-          <button onclick="collply()">View Source Code &rarr;</button>
+          <button onclick="collply()" style="color: #C77C47;" class="u-btn">View Source Code &rarr;</button>
 
         </div>
       </section>
@@ -120,6 +135,10 @@
 
   function ds(){
     window.location.href="https://www.linkedin.com/pulse/innovating-data-structures-introducing-fully-confluent-rayaan-pasha-kezqf/"
+  }
+
+  function routeOptimization(){
+    window.location.href="https://github.com/mdrayaanpasha/MIT-DAA/blob/main/route.py"
   }
 </script>
 
