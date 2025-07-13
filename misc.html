@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike/Scooter Navigation Device</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        
+        .device-container {
+            perspective: 1000px;
+            transform-style: preserve-3d;
+        }
+        
+        .device-screen {
+            transform: rotateX(15deg) rotateY(-10deg);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.5s ease;
+        }
+        
+        .device-screen:hover {
+            transform: rotateX(15deg) rotateY(-10deg) scale(1.05);
+        }
+        
+        .mount-arm {
+            background: linear-gradient(to right, #e5e7eb, #d1d5db);
+        }
+        
+        .mount-clip {
+            background: linear-gradient(to bottom, #f3f4f6, #e5e7eb);
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(59, 130, 246, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+        }
+        
+        .highlight {
+            animation: pulse 2s infinite;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="container mx-auto px-4 py-12 max-w-6xl">
+        <div class="text-center mb-16">
+            <h1 class="text-4xl font-bold mb-4 text-slate-800">NAVIGO</h1>
+            <p class="text-xl text-slate-600 max-w-2xl mx-auto">Revolutionary Navigation Device for Bikes and Scooters</p>
+        </div>
+        
+        <!-- Device description -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20 items-center">
+            <div class="space-y-6">
+                <div>
+                    <h2 class="text-2xl font-semibold text-slate-800 mb-3">Designed for the Road</h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        NAVIGO replaces traditional phone mounts with a dedicated navigation solution. 
+                        Our square-format screen (120mm x 120mm) is optimized for Google Maps 
+                        integration, providing clear directions without distractions.
+                    </p>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="flex items-start gap-3">
+                        <div class="mt-1 flex-shrink-0 h-5 w-5 text-blue-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-slate-800">Glare-resistant touchscreen</h3>
+                            <p class="text-slate-600 text-sm">Matte finish ensures visibility even in bright sunlight</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-3">
+                        <div class="mt-1 flex-shrink-0 h-5 w-5 text-blue-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-slate-800">Secure mounting system</h3>
+                            <p class="text-slate-600 text-sm">Vibration-dampening design prevents movement during rides</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-3">
+                        <div class="mt-1 flex-shrink-0 h-5 w-5 text-blue-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-slate-800">Weatherproof construction</h3>
+                            <p class="text-slate-600 text-sm">IP67 rating protects against rain, dust, and splashes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 3D Device Visualization -->
+            <div class="device-container flex justify-center">
+                <div class="relative" style="width: 300px; height: 300px;">
+                    <!-- Device screen -->
+                    <div class="device-screen absolute top-0 left-0 w-full h-64 bg-white border-2 border-slate-200">
+                        <img src="https://placehold.co/600x600/2563eb/white?text=Google+Maps" alt="Square navigation screen showing Google Maps interface with route guidance" class="w-full h-full object-cover" />
+                    </div>
+                    
+                    <!-- Mounting arm -->
+                    <div class="mount-arm absolute top-64 left-1/2 transform -translate-x-1/2 w-6 h-16 rounded-t-full"></div>
+                    
+                    <!-- Handlebar clamp -->
+                    <div class="mount-clip absolute top-80 left-1/2 transform -translate-x-1/2 w-32 h-12 rounded-lg border-2 border-slate-300 flex items-center justify-center">
+                        <div class="w-8 h-1 bg-slate-400 rounded-full"></div>
+                    </div>
+                    
+                    <!-- Screws/bolts -->
+                    <div class="absolute top-72 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-slate-300 rounded-full flex items-center justify-center">
+                        <div class="w-4 h-4 bg-slate-500 rounded-full"></div>
+                    </div>
+                    
+                    <!-- Side controls -->
+                    <div class="absolute top-8 -right-8 w-6 h-20 bg-slate-100 rounded-r-lg flex flex-col items-center justify-around py-2">
+                        <div class="w-4 h-4 bg-blue-500 rounded-full"></div>
+                        <div class="w-4 h-4 bg-blue-500 rounded-full"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Device features -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+            <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100 hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-lg mb-2 text-slate-800">Optimized Navigation</h3>
+                <p class="text-slate-600">Square format maximizes map visibility while minimizing device footprint on your handlebars.</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100 hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-lg mb-2 text-slate-800">Secure Mounting</h3>
+                <p class="text-slate-600">Patented quick-release clamp system ensures your device stays in place on rough terrain.</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100 hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-lg mb-2 text-slate-800">Quick Charging</h3>
+                <p class="text-slate-600">USB-C fast charging provides 8 hours of navigation from just 30 minutes of charging.</p>
+            </div>
+        </div>
+        
+        <!-- Usage examples -->
+        <div class="mb-20">
+            <h2 class="text-2xl font-semibold text-center mb-8 text-slate-800">Designed for All Your Rides</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100">
+                    <div class="mb-4 rounded-lg overflow-hidden">
+                        <img src="https://placehold.co/800x450/dbeafe/2563eb?text=Bike+Mount" alt="NAVIGO device mounted on bicycle handlebars showing navigation route through city streets" class="w-full" />
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2 text-slate-800">Urban Commuting</h3>
+                    <p class="text-slate-600 mb-4">Perfect for navigating city streets during your daily commute with turn-by-turn directions.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100">
+                    <div class="mb-4 rounded-lg overflow-hidden">
+                        <img src="https://placehold.co/800x450/dbeafe/2563eb?text=Scooter+Mount" alt="NAVIGO device attached to electric scooter handlebar displaying suggested route with traffic conditions" class="w-full" />
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2 text-slate-800">Scooter Navigation</h3>
+                    <p class="text-slate-600 mb-4">Essential for ride-sharing scooters with optimized routes for faster arrival times.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Technical specs -->
+        <div class="bg-white rounded-xl shadow-md border border-slate-100 p-8 mb-10">
+            <h2 class="text-2xl font-semibold mb-6 text-slate-800">Technical Specifications</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="font-medium text-lg mb-4 text-slate-700 border-b pb-2">Device</h3>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between">
+                            <span class="text-slate-600">Screen Size</span>
+                            <span class="font-medium text-slate-800">4.7" Square (120×120mm)</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="text-slate-600">Resolution</span>
+                            <span class="font-medium text-slate-800">720×720 px</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="text-slate-600">Touchscreen</span>
+                            <span class="font-medium text-slate-800">Gloved-hand Capactive</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="text-slate-600">Battery Life</span>
+                            <span class="font-medium text-slate-800">12 hours (navigation mode)</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-medium text-lg mb-4 text-slate-700 border-b pb-2">Mounting System</h3>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between">
+                            <span class="text-slate-600">Compatibility</span>
+                            <span class="font-medium text-slate-800">22mm to 35mm handlebars</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="text-slate-600">Material</span>
+                            <span class="font-medium text-slate-800">Aerospace-grade aluminum</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="text-slate-600">Weight</span>
+                            <span class="font-medium text-slate-800">180g (including mount)</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="text-slate-600">Weatherproofing</span>
+                            <span class="font-medium text-slate-800">IP67 rated</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Call to action -->
+        <div class="text-center py
