@@ -1,0 +1,145 @@
+{
+  "hero": {
+    "brand": "VORTEX.OS",
+    "nav": ["ABOUT", "ARCHITECTURE", "CHAOS", "DOCS"],
+    "navCta": "INITIALIZE",
+    "title": "RAYAAN",
+    "subtitle": "SOFTWARE ENGINEER · BACKEND & DISTRIBUTED SYSTEMS",
+    "cta": "GET STARTED"
+  },
+  "about": {
+    "eyebrow": "About ⚡",
+    "statement": "I work on designing & building systems that scale. 1+ yr experience across startups.. where i worked on fundemental systems that incl: distrubuted systems, CI/CD, data pipelines & more. currently im interning @ manaverse while completing my BCA @ SJU"
+  },
+  "work": {
+    "heading": "Selected Work",
+    "projects": [
+      {
+        "id": "01",
+        "title": "Quantiva",
+        "category": "DISTRIBUTED SYSTEMS · REAL-TIME",
+        "description": "A distributed stock analysis engine built around RabbitMQ RPC, Redis caching, and independent analysis services.",
+        "tags": ["RabbitMQ RPC", "Redis", "Node.js", "Distributed Systems"],
+        "ctaText": "EXPLORE ARCHITECTURE",
+        "ctaLink": "https://github.com/mdrayaanpasha/Quantiva",
+        "accent": "cyan"
+      },
+      {
+        "id": "02",
+        "title": "Arbit",
+        "category": "EVENT-DRIVEN ARCHITECTURE",
+        "description": "An event-driven pipeline using Kafka, Redis, PostgreSQL, and isolated Node.js services for real-time financial processing, anomaly detection, and technical analysis.",
+        "tags": ["Kafka", "Redis", "PostgreSQL", "Event-Driven"],
+        "ctaText": "VIEW PIPELINE",
+        "ctaLink": "https://github.com/mdrayaanpasha/arbit",
+        "accent": "pink"
+      }
+    ]
+  },
+  "experience": {
+    "sectionLabel": "04 // TELEMETRY LOG",
+    "heading": "Experience Matrix",
+    "protocol": "[ SPATIAL ZOOM PROTOCOL ]",
+    "experiences": [
+      {
+        "id": "01",
+        "role": "SDE Intern - Backend",
+        "company": "Manaverse",
+        "type": "INTERNSHIP",
+        "period": "JUN 2026 — PRESENT",
+        "duration": "3 MOS",
+        "location": "Remote",
+        "badge": "M",
+        "accentColor": "#22d3ee",
+        "glow": "rgba(34, 211, 238, 0.35)",
+        "description": [
+          "Designed end-to-end CI/CD pipelines to automate production deployments.",
+          "Provisioned DigitalOcean infrastructure with SSL, Nginx reverse proxies, and DNS configuration to enable zero-downtime deployments.",
+          "Containerized microservices using Docker to standardize dev/prod parity; integrated API-layer content moderation."
+        ],
+        "skills": ["CI/CD", "DigitalOcean", "Nginx", "Docker", "Backend Security"],
+        "isCurrent": true
+      },
+      {
+        "id": "02",
+        "role": "Backend Developer Intern",
+        "company": "LeXi AI",
+        "type": "INTERNSHIP",
+        "period": "APR 2026 — JUN 2026",
+        "duration": "3 MOS",
+        "location": "REMOTE",
+        "badge": "LX",
+        "accentColor": "#f472b6",
+        "glow": "rgba(244, 114, 182, 0.35)",
+        "description": [
+          "Built REST APIs and mobile features for an AI legal platform including litigation workspace, contract review, and LeXi AI chat.",
+          "Engineered case management modules and granular team permissions control.",
+          "Refactored onboarding, authentication, and core mobile screen flows for optimal responsive UX."
+        ],
+        "skills": ["React Native", "Django", "REST APIs", "AI Integration"],
+        "isCurrent": false
+      },
+      {
+        "id": "03",
+        "role": "Developer Intern",
+        "company": "St Joseph's University",
+        "type": "INTERNSHIP",
+        "period": "MAY 2026 — JUN 2026",
+        "duration": "2 MOS",
+        "location": "BENGALURU, INDIA",
+        "badge": "SJU",
+        "accentColor": "#38bdf8",
+        "glow": "rgba(56, 189, 248, 0.35)",
+        "description": [
+          "Spearheaded full design overhaul and frontend modernization for two core institutional web portals.",
+          "Audited, refactored, and maintained legacy production codebases to resolve critical rendering bottlenecks."
+        ],
+        "skills": ["UI/UX Redesign", "JavaScript", "Frontend Performance"],
+        "isCurrent": false
+      },
+      {
+        "id": "04",
+        "role": "Full-Stack Developer Intern",
+        "company": "Gauge.ro",
+        "type": "INTERNSHIP",
+        "period": "APR 2025 — NOV 2025",
+        "duration": "8 MOS",
+        "location": "REMOTE",
+        "badge": "G8",
+        "accentColor": "#c084fc",
+        "glow": "rgba(192, 132, 252, 0.35)",
+        "description": [
+          "Engineered WhatsApp automation workflows using LangChain agents and LangGraph for outreach and lead qualification.",
+          "Migrated backend architecture from Strapi CMS to a custom Express.js API, removing third-party dependencies.",
+          "Constructed an internal CRM module with automated workflow triggers for marketing operations."
+        ],
+        "skills": ["LangChain", "LangGraph", "Express.js", "PostgreSQL", "Prisma ORM"],
+        "isCurrent": false
+      },
+      {
+        "id": "05",
+        "role": "Full Stack Developer Intern",
+        "company": "Royal & Co",
+        "type": "INTERNSHIP",
+        "period": "DEC 2024 — FEB 2025",
+        "duration": "3 MOS",
+        "location": "BENGALURU, INDIA",
+        "badge": "R&C",
+        "accentColor": "#fbbf24",
+        "glow": "rgba(251, 191, 36, 0.35)",
+        "description": [
+          "Built a Natural Language to SQL execution tool using LLMs, enabling non-technical teams to query databases directly.",
+          "Implemented PostgreSQL table partitioning strategies to boost query performance on large analytical datasets.",
+          "Developed a billing forecasting system leveraging gradient descent to predict client costs and flag usage anomalies."
+        ],
+        "skills": ["LLMs", "PostgreSQL", "Table Partitioning", "Gradient Descent", "SQL"],
+        "isCurrent": false
+      }
+    ]
+  },
+  "social": [
+    { "name": "GitHub", "url": "https://github.com/mdrayaanpasha" },
+    { "name": "LinkedIn", "url": "https://www.linkedin.com/in/mdrayaanpasha/" },
+    { "name": "LeetCode", "url": "http://leetcode.com/u/mdrayaanpasha" }
+  ]
+}
