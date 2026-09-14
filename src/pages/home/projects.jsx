@@ -239,19 +239,11 @@ export default function SelectedWork() {
         {/* Header */}
         <header className="mb-16 flex flex-col gap-6 sm:mb-24 md:flex-row md:items-end md:justify-between">
           <div>
-            <span className="inline-flex items-center gap-2.5 text-[11px] font-medium uppercase tracking-[0.3em] text-zinc-500">
-              <span className="h-1 w-1 rounded-full bg-zinc-500" />
-              Portfolio
-            </span>
             <h2 className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-6xl">
               Selected Work
             </h2>
           </div>
 
-          <p className="max-w-sm text-sm leading-relaxed text-zinc-500">
-            Systems built around event-driven messaging, caching layers, and
-            isolated services.
-          </p>
         </header>
 
         {/* Grid */}

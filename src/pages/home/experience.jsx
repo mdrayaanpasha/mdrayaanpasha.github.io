@@ -119,17 +119,14 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="dark relative bg-zinc-950 px-6 py-24 font-sans"
+      className="dark relative w-full overflow-hidden bg-zinc-950 px-5 py-28 font-sans sm:px-8 sm:py-40"
     >
-      <div className="mx-auto w-full max-w-7xl">
-        <div className="mb-12 flex items-end justify-between gap-4 border-b border-white/10 pb-6">
+      <div className="relative mx-auto w-full max-w-6xl">
+        <header className="mb-16 flex flex-col gap-6 sm:mb-24 md:flex-row md:items-end md:justify-between">
           <div>
-            <h2 className="text-3xl font-extrabold tracking-tighter text-white sm:text-5xl">
+            <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-6xl">
               Experience
             </h2>
-            <p className="mt-2 font-mono text-xs uppercase tracking-widest text-zinc-500">
-              Hover a card to flip it
-            </p>
           </div>
 
           <div className="flex items-center gap-3">
@@ -150,7 +147,7 @@ export default function Experience() {
               <ChevronRight className="h-5 w-5" />
             </button>
           </div>
-        </div>
+        </header>
 
         <div
           ref={scrollRef}
