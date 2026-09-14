@@ -97,7 +97,10 @@ const EXPERIENCES = [
     glow: 'rgba(96, 165, 250, 0.35)',
     description: [
     ],
-    skills: [''
+
+    skills: ['Built: NL->SQL with custom RAG',
+      'Optimized DB: partitioning, Sharding',
+      'Billing System with predictive analysis'
     ],
     isCurrent: false,
   },
