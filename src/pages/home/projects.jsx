@@ -6,7 +6,7 @@ const PROJECTS = [
   {
     id: '01',
     title: 'Quantiva',
-    category: 'Distributed Systems · Real-Time',
+
     description:
       'A distributed stock analysis engine built around RabbitMQ RPC, Redis caching, and independent analysis services.',
     tags: ['RabbitMQ RPC', 'Redis', 'Node.js', 'Distributed Systems'],
@@ -18,7 +18,7 @@ const PROJECTS = [
   {
     id: '02',
     title: 'Arbit',
-    category: 'Event-Driven Architecture',
+
     description:
       'An event-driven pipeline using Kafka, Redis, PostgreSQL, and isolated Node.js services for real-time financial processing, anomaly detection, and technical analysis.',
     tags: ['Kafka', 'Redis', 'PostgreSQL', 'Event-Driven'],
@@ -169,9 +169,7 @@ function ProjectCard({ project }) {
 
       {/* Content */}
       <div className="relative z-10 flex flex-1 flex-col px-4 pb-4 pt-6 sm:px-5 sm:pb-5">
-        <span className="text-[10px] font-medium uppercase tracking-[0.24em] text-zinc-500">
-          {project.category}
-        </span>
+
 
         <h3 className="mt-3 text-2xl font-semibold tracking-tight text-white sm:text-[28px]">
           {project.title}
