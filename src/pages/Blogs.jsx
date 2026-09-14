@@ -145,7 +145,7 @@ export default function Blogs() {
         <div key={section.title}>
           {i > 0 && <hr className="my-8 border-gray-700" />}
           <h2 className="m-8 text-2xl font-bold md:text-3xl">{section.title}</h2>
-          <div className="flex gap-8 overflow-x-auto px-6 pb-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <div className="flex gap-8 overflow-x-auto px-6 pb-6 scrollbar-none [&::-webkit-scrollbar]:hidden">
             {section.posts.map((post) => (
               <PostCard key={post.title + post.href} post={post} />
             ))}

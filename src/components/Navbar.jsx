@@ -29,7 +29,7 @@ export default function GlassNavbar() {
           </a>
 
           {/* Navigation Links */}
-          <div className="hidden md:flex items-center gap-1 rounded-full border border-white/5 bg-white/[0.02] p-1 backdrop-blur-md">
+          <div className="hidden md:flex items-center gap-1 rounded-full border border-white/5 bg-white/2 p-1 backdrop-blur-md">
             {['Who Am I?', 'Experience', 'Work'].map((item) => (
               <a
                 key={item}

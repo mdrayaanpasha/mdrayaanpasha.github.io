@@ -28,7 +28,7 @@ export default function AestheticHero() {
 
       {/* 3. TRANSPARENT GLASS NAVBAR */}
       <header className="relative z-30 pt-6 px-4 flex justify-center">
-        <nav className="flex items-center justify-between w-full max-w-4xl px-6 py-2.5 rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.8)]">
+        {/* <nav className="flex items-center justify-between w-full max-w-4xl px-6 py-2.5 rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.8)]">
           <a href="#" className="text-xs font-mono font-bold tracking-widest text-zinc-100 hover:text-cyan-300 transition-colors">
             VORTEX<span className="text-pink-400">.OS</span>
           </a>
@@ -51,7 +51,7 @@ export default function AestheticHero() {
           >
             INITIALIZE
           </a>
-        </nav>
+        </nav> */}
       </header>
 
       {/* 4. MAIN HERO CONTENT */}
@@ -59,7 +59,7 @@ export default function AestheticHero() {
         
         {/* Title with Pastel Gradient Text & Glitch/Scale Hover Effect */}
         <h1 className="group relative font-black tracking-tighter text-6xl sm:text-8xl md:text-9xl cursor-default select-none">
-          <span className="bg-gradient-to-r from-white via-zinc-200 to-zinc-400 bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-white via-zinc-200 to-zinc-400 bg-clip-text text-transparent">
             RAYAAN
           </span>
           
@@ -76,23 +76,18 @@ export default function AestheticHero() {
         <div className="mt-10 flex flex-col items-center gap-3 sm:flex-row">
           <Link
             to="/api"
-            className="group relative inline-flex items-center gap-3 overflow-hidden rounded-2xl border border-emerald-400/30 bg-emerald-400/[0.06] px-7 py-3 font-mono text-xs font-bold text-emerald-200 backdrop-blur-xl transition-all duration-300 hover:border-emerald-300/60 hover:bg-emerald-400/10 hover:shadow-[0_0_30px_rgba(52,211,153,0.35)] hover:scale-105 active:scale-95"
+            className="group relative inline-flex items-center gap-3 overflow-hidden rounded-2xl border border-emerald-400/30 bg-emerald-400/6 px-7 py-3 font-mono text-xs font-bold text-emerald-200 backdrop-blur-xl transition-all duration-300 hover:border-emerald-300/60 hover:bg-emerald-400/10 hover:shadow-[0_0_30px_rgba(52,211,153,0.35)] hover:scale-105 active:scale-95"
           >
             {/* Sweeping sheen on hover */}
-            <span className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-emerald-300/20 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
-            <span className="relative flex h-2 w-2 items-center justify-center">
-              <span className="absolute h-2 w-2 animate-ping rounded-full bg-emerald-400/70" />
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-            </span>
+            <span className="pointer-events-none absolute inset-0 -translate-x-full bg-linear-to-r from-transparent via-emerald-300/20 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+        
             <span className="relative tracking-widest">$ BACKEND DEVELOPER MODE</span>
             <span className="relative text-emerald-400 transition-transform duration-300 group-hover:translate-x-1">
               →
             </span>
           </Link>
 
-          <span className="font-mono text-[10px] tracking-widest text-zinc-500">
-            curl api.rayaan.dev/v1/profile
-          </span>
+        
         </div>
 
       </main>

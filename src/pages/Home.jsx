@@ -1,7 +1,7 @@
 import Navbar from '../components/Navbar.jsx'
 import HomeHero from './home/hero.jsx'
 import SelectedWorkCatalog from './home/projects.jsx'
-import ScrollRevealSection from './home/scroll-about.jsx'
+import ScrollReveal from '../components/scrollReveal.jsx'
 import FloatingBottomDock from './home/sticky-social.jsx'
 import ExperienceSection from './home/experience.jsx'
 
@@ -16,53 +16,33 @@ function Lemon({ color, children }) {
   )
 }
 
-const PROJECTS = [
-  {
-    title: "🚢 Route Optimization Algorithm for Safer, Faster Shipping | '24",
-    img: '/projects/imgs/ship-algo.jpg',
-    href: 'https://github.com/mdrayaanpasha/MIT-DAA/blob/main/route.py',
-  },
-  {
-    title: "🫂 Social Networking [MERN] | '24",
-    img: '/projects/imgs/skillflix.jpeg',
-    href: 'https://github.com/mdrayaanpasha/Skill-Flix-MERN',
-  },
-  {
-    title: "👨🏻‍💼 Service MarketPlace [MERN] | '24",
-    img: '/projects/imgs/market-place.jpeg',
-    href: 'https://github.com/mdrayaanpasha/finder',
-  },
-  { 
-    title: "🛍️ E-Commerce Website [PHP-SQL] | '24",
-    img: '/projects/imgs/pritts.jpg',
-    href: 'https://github.com/mdrayaanpasha/pritchetts',
-  },
-  {
-    title: "🏫 College Application [PHP SQL] | '24",
-    img: '/projects/imgs/collply.jpeg',
-    href: 'https://github.com/mdrayaanpasha/collply',
-  },
-  {
-    title: "🧩 Fully Confluent Retro-Active Data Structure | '24",
-    img: '/projects/imgs/retro-active.jpeg',
-    href: 'https://www.linkedin.com/pulse/innovating-data-structures-introducing-fully-confluent-rayaan-pasha-kezqf/',
-  },
-]
+
 
 export default function Home() {
   return (
-    <div className="bg-white text-black">
+    <div className="bg-zinc-950 text-white selection:bg-pink-500 selection:text-white">
       <Navbar variant="light" />
 
       {/* Hero */}
       <HomeHero />
-      <ScrollRevealSection />
+
+      <section className="relative w-full bg-[#09090B] px-6 py-28 sm:py-36 flex items-center justify-center ">
+        <div className="mx-auto max-w-5xl ">
+          <ScrollReveal
+            baseOpacity={0.1}
+            enableBlur
+            baseRotation={5}
+            blurStrength={10}
+            textClassName="text-zinc-100 font-light"
+          >
+            I design & build scalable systems. 1+ yr experience in fundamental system design (distributed systems, CI/CD, data pipelines,etc) across startups. currently interning @ manaverse. 
+          </ScrollReveal>
+        </div>
+      </section>
+
       <ExperienceSection />
       <SelectedWorkCatalog />
       <FloatingBottomDock />
-
-    
-    
     </div>
   )
 }

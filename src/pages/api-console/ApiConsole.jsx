@@ -96,7 +96,7 @@ function KeyValEditor({ rows, setRows }) {
               value={r.key}
               onChange={(e) => updateRow(i, 'key', e.target.value)}
               placeholder="Key"
-              className="w-full bg-transparent px-3 py-1.5 text-[#e6e6e6] outline-none placeholder:text-[#6b6b6b]"
+              className="w-full bg-transparent px-3 py-1.5 text-[#e6e6e6] outline-hidden placeholder:text-[#6b6b6b]"
             />
           </div>
           <div className="flex-1 border-r border-[#383838]">
@@ -105,7 +105,7 @@ function KeyValEditor({ rows, setRows }) {
               value={r.value}
               onChange={(e) => updateRow(i, 'value', e.target.value)}
               placeholder="Value"
-              className="w-full bg-transparent px-3 py-1.5 text-[#e6e6e6] outline-none placeholder:text-[#6b6b6b]"
+              className="w-full bg-transparent px-3 py-1.5 text-[#e6e6e6] outline-hidden placeholder:text-[#6b6b6b]"
             />
           </div>
           <div className="flex-1">
@@ -114,7 +114,7 @@ function KeyValEditor({ rows, setRows }) {
               value={r.description || ''}
               onChange={(e) => updateRow(i, 'description', e.target.value)}
               placeholder="Description"
-              className="w-full bg-transparent px-3 py-1.5 text-[#a6a6a6] outline-none placeholder:text-[#6b6b6b]"
+              className="w-full bg-transparent px-3 py-1.5 text-[#a6a6a6] outline-hidden placeholder:text-[#6b6b6b]"
             />
           </div>
         </div>
@@ -239,24 +239,24 @@ export default function ApiConsole() {
       {/* Top Header / App Bar */}
       <header className="flex h-10 shrink-0 items-center justify-between border-b border-[#2b2b2b] bg-[#212121] px-3">
         <div className="flex items-center gap-3">
-          <div className="flex h-5 w-5 items-center justify-center rounded bg-[#ff6c37]">
+          <div className="flex h-5 w-5 items-center justify-center rounded-sm bg-[#ff6c37]">
             <svg className="h-3 w-3 fill-white" viewBox="0 0 24 24">
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
             </svg>
           </div>
           <span className="text-xs font-semibold text-[#e6e6e6]">Rayaan API Console</span>
-          <span className="rounded bg-[#383838] px-1.5 py-0.5 text-[10px] text-[#a6a6a6]">
+          <span className="rounded-sm bg-[#383838] px-1.5 py-0.5 text-[10px] text-[#a6a6a6]">
             v1.0.0
           </span>
         </div>
         <div className="flex items-center gap-2">
-          <div className="flex items-center gap-1.5 rounded bg-[#2b2b2b] px-2 py-1 text-[11px] text-[#a6a6a6]">
+          <div className="flex items-center gap-1.5 rounded-sm bg-[#2b2b2b] px-2 py-1 text-[11px] text-[#a6a6a6]">
             <span className="h-2 w-2 rounded-full bg-[#0cbb52]" />
             <span>My Workspace</span>
           </div>
           <a
             href="/"
-            className="rounded bg-[#2b2b2b] px-2 py-1 text-[11px] text-[#a6a6a6] hover:bg-[#383838] hover:text-white"
+            className="rounded-sm bg-[#2b2b2b] px-2 py-1 text-[11px] text-[#a6a6a6] hover:bg-[#383838] hover:text-white"
           >
             ← Portfolio
           </a>
@@ -337,11 +337,11 @@ export default function ApiConsole() {
 
           {/* Request URL Bar */}
           <div className="flex items-center gap-2 p-3 bg-[#212121] border-b border-[#2b2b2b]">
-            <div className="flex flex-1 items-center border border-[#383838] bg-[#1c1c1c] rounded">
+            <div className="flex flex-1 items-center border border-[#383838] bg-[#1c1c1c] rounded-sm">
               <select
                 value={method}
                 onChange={(e) => setMethod(e.target.value)}
-                className="cursor-pointer bg-transparent px-3 py-1.5 text-xs font-bold outline-none border-r border-[#383838]"
+                className="cursor-pointer bg-transparent px-3 py-1.5 text-xs font-bold outline-hidden border-r border-[#383838]"
                 style={{ color: METHOD_COLORS[method] || '#a6a6a6' }}
               >
                 {['GET', 'POST', 'PUT', 'PATCH', 'DELETE'].map((m) => (
@@ -355,14 +355,14 @@ export default function ApiConsole() {
                 value={path}
                 onChange={(e) => setPath(e.target.value)}
                 spellCheck={false}
-                className="w-full bg-transparent px-1 py-1.5 text-xs text-white outline-none font-mono"
+                className="w-full bg-transparent px-1 py-1.5 text-xs text-white outline-hidden font-mono"
               />
             </div>
 
             <button
               onClick={send}
               disabled={loading}
-              className="flex items-center justify-center rounded bg-[#097bed] px-6 py-1.5 text-xs font-bold text-white hover:bg-[#006bd6] disabled:opacity-50"
+              className="flex items-center justify-center rounded-sm bg-[#097bed] px-6 py-1.5 text-xs font-bold text-white hover:bg-[#006bd6] disabled:opacity-50"
             >
               {loading ? (
                 <span className="h-3.5 w-3.5 animate-spin rounded-full border-2 border-white border-t-transparent" />
@@ -478,7 +478,7 @@ export default function ApiConsole() {
                   ))}
                   <button
                     onClick={copyBody}
-                    className="rounded bg-[#2b2b2b] px-2 py-0.5 text-[11px] text-[#a6a6a6] hover:bg-[#383838] hover:text-white"
+                    className="rounded-sm bg-[#2b2b2b] px-2 py-0.5 text-[11px] text-[#a6a6a6] hover:bg-[#383838] hover:text-white"
                   >
                     {copied ? '✓ Copied' : 'Copy'}
                   </button>
